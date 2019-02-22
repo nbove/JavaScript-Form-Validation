@@ -1,0 +1,31 @@
+<HTML>
+<BODY>
+<link rel="stylesheet" href="styles.css">
+<h1>Java Script Form Validation</h1>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  First Name:<br>
+  <input type="text" name="firstname"><br>
+  Last Name:<br>
+  <input type="text" name="lastname"><br>
+  Email:<br>
+  <input type="text" name="email"><br>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+<script>
+function validateForm() {
+  var a = document.forms["myForm"]["lastname"].value;
+  var x = document.forms["myForm"]["firstname"].value;
+  var s = document.forms["myForm"]["email"].value;
+  if (x == "") 
+    alert("Firstname must be filled out");
+  if (a == "")
+    alert("lastname must be filled out");
+  if (s == ""){
+    alert("email must be filled out");
+  		return false;		
+  }
+}
+</script>
+</BODY>
+</HTML>
